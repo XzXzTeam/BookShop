@@ -11,6 +11,7 @@
         public Publisher Publisher { get; set; }
         public decimal Cost { get; set; }
         public IEnumerable<Author> Authors { get; set; }
+        public IEnumerable<Genre> Genres { get; set; } 
         public IEnumerable<BookLike> Likes { get; set; }
         public IEnumerable<Review> Reviews { get; set; }
 
