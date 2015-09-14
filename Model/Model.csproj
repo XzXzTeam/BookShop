@@ -41,24 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="AccountType.cs" />
-    <Compile Include="Author.cs" />
-    <Compile Include="Book.cs" />
-    <Compile Include="BookLike.cs" />
-    <Compile Include="DeliveryAddress.cs" />
-    <Compile Include="Genre.cs" />
-    <Compile Include="Image.cs" />
-    <Compile Include="LikeType.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderState.cs" />
-    <Compile Include="PersistableObject.cs" />
+    <Compile Include="Abstract\IAccount.cs" />
+    <Compile Include="Enums\AccountType.cs" />
+    <Compile Include="Abstract\IAuthor.cs" />
+    <Compile Include="Abstract\IBook.cs" />
+    <Compile Include="Abstract\IBookLike.cs" />
+    <Compile Include="Abstract\IDeliveryAddress.cs" />
+    <Compile Include="Abstract\IGenre.cs" />
+    <Compile Include="Abstract\IImage.cs" />
+    <Compile Include="Enums\LikeType.cs" />
+    <Compile Include="Abstract\IOrder.cs" />
+    <Compile Include="Enums\OrderState.cs" />
+    <Compile Include="Abstract\IPersistableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Publisher.cs" />
-    <Compile Include="Review.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <Compile Include="Abstract\IPublisher.cs" />
+    <Compile Include="Abstract\IReview.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
