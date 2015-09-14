@@ -1,7 +1,11 @@
-﻿namespace Model.Abstract
-{
-    using System;
+﻿#region usings
 
+using System;
+
+#endregion
+
+namespace Model.Abstract
+{
     public interface IReview : IPersistableObject
     {
         IAuthor Author { get; set; }

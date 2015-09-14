@@ -1,4 +1,10 @@
-﻿namespace Model.Abstract
+﻿#region usings
+
+using Model.Enums;
+
+#endregion
+
+namespace Model.Abstract
 {
     public interface IBookLike : IPersistableObject
     {

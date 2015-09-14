@@ -1,7 +1,12 @@
-﻿namespace Model.Abstract
-{
-    using System.Collections.Generic;
+﻿#region usings
 
+using System.Collections.Generic;
+using Model.Enums;
+
+#endregion
+
+namespace Model.Abstract
+{
     public interface IAccount : IPersistableObject
     {
         string Login { get; set; }
