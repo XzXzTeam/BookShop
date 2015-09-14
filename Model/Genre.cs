@@ -7,6 +7,7 @@ namespace Model
 {
     public class Genre : PersistableObject
     {
-        public String Name { get; set; }
+        public string Name { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }
