@@ -1,6 +1,7 @@
 ﻿#region usings
 
 using System;
+using Model.Enums;
 
 #endregion
 
