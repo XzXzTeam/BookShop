@@ -1,4 +1,4 @@
-﻿namespace Model
+﻿namespace Model.Abstract
 {
     using System.Collections.Generic;
 

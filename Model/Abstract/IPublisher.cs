@@ -1,4 +1,4 @@
-﻿namespace Model
+﻿namespace Model.Abstract
 {
     public interface IPublisher : IPersistableObject
     {
