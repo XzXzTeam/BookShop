@@ -2,6 +2,7 @@
 {
     public enum LikeType
     {
-        LIKE, DISLIKE
+        LIKE,
+        DISLIKE
     }
 }

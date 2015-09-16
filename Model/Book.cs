@@ -1,7 +1,12 @@
-﻿namespace Model
-{
-    using System.Collections.Generic;
+﻿#region usings
 
+using System.Collections.Generic;
+using AbstractModel;
+
+#endregion
+
+namespace Model
+{
     public class Book : PersistableObject
     {
         public string Title { get; set; }
@@ -10,9 +15,9 @@
         public Image Splash { get; set; }
         public Publisher Publisher { get; set; }
         public decimal Cost { get; set; }
-        public IEnumerable<Author> Authors { get; set; }
-        public IEnumerable<BookLike> Likes { get; set; }
-        public IEnumerable<Review> Reviews { get; set; }
-
+        public ICollection<Author> Authors { get; set; }
+        public ICollection<Genre> Genres { get; set; }
+        public ICollection<BookLike> Likes { get; set; }
+        public ICollection<Review> Reviews { get; set; }
     }
 }

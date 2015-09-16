@@ -1,10 +1,15 @@
-﻿namespace Model
-{
-    using System;
+﻿#region usings
 
+using System;
+using AbstractModel;
+
+#endregion
+
+namespace Model
+{
     public class Review : PersistableObject
     {
-        public User Author { get; set; }
+        public Author Author { get; set; }
         public Book Book { get; set; }
         public string Content { get; set; }
         public DateTime Date { get; set; }

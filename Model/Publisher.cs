@@ -1,4 +1,10 @@
-﻿namespace Model
+﻿#region usings
+
+using AbstractModel;
+
+#endregion
+
+namespace Model
 {
     public class Publisher : PersistableObject
     {

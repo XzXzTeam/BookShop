@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{178EC361-7FD7-42E8-8522-5E15DA4A545F}</ProjectGuid>
+    <ProjectGuid>{72D085A9-6B35-4D73-A29A-1D4344D0EF12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Model</RootNamespace>
-    <AssemblyName>Model</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <RootNamespace>BookShopFileRepository</RootNamespace>
+    <AssemblyName>BookShopFileRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,29 +36,34 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="AccountType.cs" />
-    <Compile Include="Author.cs" />
-    <Compile Include="Book.cs" />
-    <Compile Include="BookLike.cs" />
-    <Compile Include="DeliveryAddress.cs" />
-    <Compile Include="Genre.cs" />
-    <Compile Include="Image.cs" />
-    <Compile Include="LikeType.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderState.cs" />
+    <Compile Include="AccountRepository.cs" />
+    <Compile Include="AuthorRepository.cs" />
+    <Compile Include="Base\AbstractBookShopFileRepository.cs" />
+    <Compile Include="BookLikeRepository.cs" />
+    <Compile Include="BookRepository.cs" />
+    <Compile Include="DeliveryAddressRepository.cs" />
+    <Compile Include="GenreRepository.cs" />
+    <Compile Include="ImageRepository.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Publisher.cs" />
-    <Compile Include="Review.cs" />
+    <Compile Include="PublisherRepository.cs" />
+    <Compile Include="ReviewRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AbstractModel\AbstractModel.csproj">
       <Project>{7d638a6b-473e-4acc-a0e3-09a1ffcfa412}</Project>
       <Name>AbstractModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbstractRepository\AbstractRepository.csproj">
+      <Project>{e93f2f14-deef-4bf5-8a46-96009eca94fa}</Project>
+      <Name>AbstractRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{178ec361-7fd7-42e8-8522-5e15da4a545f}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

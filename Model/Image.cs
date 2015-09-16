@@ -1,7 +1,12 @@
-﻿namespace Model
-{
-    using System;
+﻿#region usings
 
+using System;
+using AbstractModel;
+
+#endregion
+
+namespace Model
+{
     public class Image : PersistableObject
     {
         public string RelativePath { get; set; }

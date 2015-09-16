@@ -1,4 +1,4 @@
-﻿namespace Model
+﻿namespace AbstractModel
 {
     public abstract class PersistableObject
     {

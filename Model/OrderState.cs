@@ -2,6 +2,10 @@
 {
     public enum OrderState
     {
-        OPEN, ACCEPT, DECLINE, SENT, DELIVERED
+        OPEN,
+        ACCEPT,
+        DECLINE,
+        SENT,
+        DELIVERED
     }
 }
