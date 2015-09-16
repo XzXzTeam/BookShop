@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AbstractModel;
 using AbstractRepository;
 
@@ -9,48 +10,57 @@ using AbstractRepository;
 
 namespace BookShopMemoryRepository.Base
 {
-    public abstract class AbstractBookMemoryRepository<T> : IRepository<T> where T : PersistableObject
+    public abstract class AbstractBookMemoryAsyncRepository<T> : IAsyncRepository<T> where T : PersistableObject
     {
         protected ICollection<T> _entities;
 
-        protected AbstractBookMemoryRepository()
+        protected AbstractBookMemoryAsyncRepository()
         {
             _entities = new List<T>();
         }
 
-        public void Add(T entity)
+        public async Task Add(T entity)
         {
-            _entities.Add(entity);
+            await Task.Run(() => { _entities.Add(entity); });
         }
 
-        public void Remove(T entity)
+        public async Task Remove(T entity)
         {
-            _entities.Remove(entity);
+            await Task.Run(() => { _entities.Remove(entity); });
         }
 
-        public void Remove(int id)
+        public async Task Remove(int id)
         {
-            var entity = _entities.First(e => e.Id == id);
-            if (entity != null)
+            await Task.Run(() =>
             {
-                _entities.Remove(entity);
-            }
+                var entity = _entities.First(e => e.Id == id);
+                if (entity != null)
+                {
+                    _entities.Remove(entity);
+                }
+            });
         }
 
-        public ICollection<T> GetAll()
+        public async Task<ICollection<T>> GetAll()
         {
-            return _entities;
+            return await Task.Run(() => _entities);
         }
 
-        public T GetById(int id)
+        public async Task<T> GetById(int id)
         {
-            return _entities.First(e => e.Id == id);
+            return await Task.Run(() =>
+            {
+                return _entities.First(e => e.Id == id);
+            });
         }
 
-        public void Update(T entity)
+        public async Task Update(T entity)
         {
-            Remove(entity.Id);
-            Add(entity);
+            await Task.Run(() =>
+            {
+                Remove(entity.Id).RunSynchronously();
+                Add(entity).RunSynchronously();
+            });
         }
     }
 }

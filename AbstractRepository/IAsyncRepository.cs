@@ -1,17 +1,20 @@
-﻿using System;
+﻿#region usings
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
+using AbstractModel;
+
+#endregion
 
 namespace AbstractRepository
 {
     public interface IAsyncRepository<T> where T : PersistableObject
     {
-        void Add(T entity);
-        void Remove(T entity);
-        void Remove(int id);
-        ICollection<T> GetAll();
-        T GetById(int id);
-        void Update(T entity);
+        Task Add(T entity);
+        Task Remove(T entity);
+        Task Remove(int id);
+        Task<ICollection<T>> GetAll();
+        Task<T> GetById(int id);
+        Task Update(T entity);
     }
 }
