@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{178EC361-7FD7-42E8-8522-5E15DA4A545F}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShopMemoryRepository", "BookShopRepository\BookShopMemoryRepository.csproj", "{A2413624-8432-472E-AA8B-44D65DABEF2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{770C7780-CB7D-41B1-B994-6C4B21A2273C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{525B283C-5827-4B63-B006-5466EEEEB501}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{770C7780-CB7D-41B1-B994-6C4B21A2273C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{770C7780-CB7D-41B1-B994-6C4B21A2273C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{770C7780-CB7D-41B1-B994-6C4B21A2273C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525B283C-5827-4B63-B006-5466EEEEB501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525B283C-5827-4B63-B006-5466EEEEB501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525B283C-5827-4B63-B006-5466EEEEB501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525B283C-5827-4B63-B006-5466EEEEB501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
